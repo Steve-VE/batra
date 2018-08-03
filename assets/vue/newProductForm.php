@@ -61,8 +61,6 @@ $allergens_list = [
             <li>Sel <input type="number" name="" id="">%</li>
             <li>Autre <input type="number" name="" id="">%</li>
         </ul>
-
-        
     <br>
     <!-- contact -->
         <label for="">Contact</label>
