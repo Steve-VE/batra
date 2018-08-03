@@ -3,7 +3,10 @@ $allergens_list = [
     "gluten", "crustacés", "oeufs", "poisson", "arachides", "soja", "lait", "fruits à coque", "céléri", "moutarde", "graines de sésame", "anhydride sulfureux et sulfites", "lupin", "mollusques"
 ];
 ?>
-<form action="" method="post">
+<form action="#" method="post" enctype="multipart/form-data">
+    <!--photo du produit-->
+    <label for="photo">Ajouter une photo du produit</label>
+    <input type="file" name="photo" id="photo">
     <!-- dénomination -->
         <label for="">Dénomination</label>
         <input type="text" name="" id="">
@@ -12,8 +15,8 @@ $allergens_list = [
         <label for="">Provenance</label>
         <input type="text" name="" id="">
     <br>
-    <!-- liste ingrdiant -->
-        <label for="">Liste ingrdiant</label>
+    <!-- liste ingrédient -->
+        <label for="">Liste des ingrédients</label>
         <textarea name="" id="" cols="30" rows="10"></textarea>
     <br>
     <!-- alégéne -->
@@ -100,7 +103,7 @@ $allergens_list = [
         <input type="number" name="alc" id="alc">%
     <br>
     <a class="button" href="#">Bouton d'envois</a>
-<button>Envois du formulaire</button>
+<button name="envoie">Envois du formulaire</button>
 <input type="submit" value="submit input">
 <input type="button" value="button input">
 </form>

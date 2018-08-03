@@ -1,4 +1,8 @@
 <?php 
+if(isset($_POST['envoie'])){
+    // print_r($_FILES);
+    include './assets/uploads/upload.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
