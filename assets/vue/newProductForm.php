@@ -22,10 +22,10 @@ $allergens_list = [
                 <?php foreach($allergens_list as $allergen){?>
                     <li>
                         <label for="allergen_<?= $allergen;?>"><?= ucfirst($allergen);?> :</label>
-                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="">N'en contient pas</label>
-                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="">Contient</label>
-                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="">Peu contenir des traces</label>
-                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="">Inconnu</label>
+                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="nothing" checked>N'en contient pas</label>
+                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="contain">Contient</label>
+                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="may_contain">Peu contenir des traces</label>
+                            <label><input type="radio" name="allergen_<?= $allergen;?>" id="unknow">Inconnu</label>
                     </li>
                 <?php } ?>
             </ol>
