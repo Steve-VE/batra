@@ -1,4 +1,5 @@
 <?php 
+include_once 'defines.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,9 @@
     <?php include('./assets/vue/link.php') ?>
 </head>
 <body>
-<?php include './assets/vue/newProductForm.php'; ?>
+<?php
+    include VIEWS.'/newProductForm.php';
+?>
      <!-- <div class="row"> 
          <div class="col-md-12 col-lg-6">
              <div class="row">
