@@ -146,16 +146,16 @@
         <textarea name="" id="" cols="30" rows="10"></textarea>
     <br>
     <!-- déclaration nutritionnelle -->
-        <label for="">Déclaration nutritionnelle</label>
+        <b>Déclaration nutritionnelle : </b>
         <ul>
-            <li>Énergie <input type="number" name="" id=""> </li>
-            <li>Graisses totales <input type="number" name="" id=""></li>
-            <li>Acides gras saturés <input type="number" name="" id=""></li>
-            <li>Glucides <input type="number" name="" id=""></li>
-            <li>Sucres <input type="number" name="" id=""></li>
-            <li>Protéines <input type="number" name="" id=""></li>
-            <li>Sel <input type="number" name="" id=""></li>
-            <li>Autre <input type="number" name="" id=""></li>
+            <li>Énergie <input type="number" name="" id="">cal</li>
+            <li>Graisses totales <input type="number" name="" id="">%</li>
+            <li>Acides gras saturés <input type="number" name="" id="">%</li>
+            <li>Glucides <input type="number" name="" id="">%</li>
+            <li>Sucres <input type="number" name="" id="">%</li>
+            <li>Protéines <input type="number" name="" id="">%</li>
+            <li>Sel <input type="number" name="" id="">%</li>
+            <li>Autre <input type="number" name="" id="">%</li>
         </ul>
 
         
@@ -170,6 +170,7 @@
     <br>
     <!-- Teneur en alcool -->
         <label for="">Teneur en alcool</label>
+        <input type="number" name="" id="">%
     <br>
 </form>
      <!-- <div class="row"> 
