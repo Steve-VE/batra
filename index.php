@@ -1,6 +1,15 @@
 <?php 
 include_once 'defines.php';
+
+include_once 'config/bdd_local.php';
 session_start();
+if(isset($_SESSION['personnal_codebar'])){
+    $personalCodebar = $_SESSION['personnal_codebar'];
+}
+else{
+    $db = connectToDB('bdd_local');
+}
+
 $pageRequired = "home";
 $listOfPages = [
     "encoding",

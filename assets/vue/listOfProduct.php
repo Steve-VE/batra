@@ -1,11 +1,13 @@
 <?php 
-    // if(isset($_SESSION['personnal_codebar']) || true){
+    if(!isset($_SESSION['personnal_codebar'])){
+        header('Location: '.URL);
+    }
+    $productorId = $_SESSION['personnal_barcode'];
 
-    // }
-    // else{
-    //     header('Location: '.URL);
-    // }
-    $productorId = "48612348";
+    // $sql = '
+    // SELECT * FROM products
+    // WHERE ';
+
     $listOfBarCodes = [];
     $listOfProducts = [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
