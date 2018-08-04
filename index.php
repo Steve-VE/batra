@@ -6,13 +6,12 @@ session_start();
 if(isset($_SESSION['personnal_codebar'])){
     $personalCodebar = $_SESSION['personnal_codebar'];
 }
-else{
-    $db = connectToDB('bdd_local');
-}
+$db = connectToDB('bdd_local');
 
 $pageRequired = "home";
 $listOfPages = [
     "encoding",
+    "logout",
     "subscribe",
     "inventory"
 ];
@@ -34,6 +33,10 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     include VIEWS.'/header.php';
     if($pageRequired == 'subscribe'){
         include VIEWS.'/newUserForm.php';
+    }
+    else if($pageRequired == 'logout'){
+        session_destroy();
+        include VIEWS.'/home.php';
     }
     else if($pageRequired == 'encoding' && isset($personalCodebar)){
         include VIEWS.'/newProductForm.php';
