@@ -13,12 +13,6 @@ var_dump($_SESSION);
     $productsRawData = $statement->fetchAll();
 
     $listOfBarCodes = [];
-    $listOfProducts = [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga."
-    ];
     for($i = 0; $i < 5; $i++){
         $barcode = "254". $productorId;
 
@@ -50,11 +44,10 @@ var_dump($_SESSION);
             <div class="barcode four columns">
             <?php
                 if(isset($productsRawData[$i])){
+                    echo '<a href="?page=product&id='. $productsRawData[$i]['id'] .'">';
                     echo '253'. $_SESSION['personnal_barcode'] . $productsRawData[$i]['barcode_tail'];
-                }
-                else {
-                    $barcode; 
-                }?>
+                    echo '</a>';
+                } ?>
             </div>
         </li>
     <?php 

@@ -13,7 +13,8 @@ $listOfPages = [
     "encoding",
     "logout",
     "subscribe",
-    "inventory"
+    "inventory",
+    "product"
 ];
 
 if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
@@ -40,6 +41,9 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     }
     else if($pageRequired == 'encoding' && isset($personalCodebar)){
         include VIEWS.'/newProductForm.php';
+    }
+    else if($pageRequired == 'product'){
+        include VIEWS.'/productSheet.php';
     }
     else if(isset($personalCodebar)){
         include VIEWS.'/listOfProduct.php';
