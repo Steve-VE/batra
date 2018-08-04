@@ -6,16 +6,9 @@ if(isset($_POST['envoie'])){
 }
 include_once 'defines.php';
 
-<<<<<<< HEAD
-//include_once 'config/bdd_local.php';
-session_start();
-if(isset($_SESSION['personnal_barcode'])){
-    $personalCodebar = $_SESSION['personnal_barcode'];
-=======
 session_start();
 if(isset($_SESSION['personal_barcode'])){
     $personalBarcode = $_SESSION['personal_barcode'];
->>>>>>> 6f36dd93b223fd0bdc9efc2b0889d80df1dfd503
 }
 $db = connectToDB('bdd_local');
 
@@ -35,38 +28,6 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>BATRA</title>
-        <?php include(VIEWS.'/link.php') ?>
-    </head>
-    <?php
-        var_dump(isset($personalCodebar));
-        include VIEWS.'/header.php';
-        if($pageRequired == 'subscribe'){
-            include VIEWS.'/newUserForm.php';
-        }
-        else if($pageRequired == 'logout'){
-            session_destroy();
-            include VIEWS.'/home.php';
-        }
-        else if($pageRequired == 'encoding' && isset($personalCodebar)){
-            include VIEWS.'/newProductForm.php';
-        }
-        else if(isset($personalCodebar)){
-            include VIEWS.'/listOfProduct.php';
-        }
-        else{
-            include VIEWS.'/home.php';
-        }
-    ?>
-        
-    <?php include VIEWS.'/footer.php';?>
-
-=======
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,5 +58,4 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     }
 
 include VIEWS.'/footer.php'; ?>
->>>>>>> 6f36dd93b223fd0bdc9efc2b0889d80df1dfd503
 </html>

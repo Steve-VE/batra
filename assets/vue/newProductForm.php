@@ -17,12 +17,12 @@ $allergens_list = [
                         </div> -->
                     </div>
                     <div class="row"><!-- dénomination -->
-                        <div class="col-md-12 col-lg-6">
-                            <label for="">Dénomination</label>
+                        <label for=""><div class="col-md-12 col-lg-6">
+                            Dénomination
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <input type="text" name="" id="">
-                        </div>
+                        </div></label>
                     </div>
                     <div class="row"><!-- liste ingrédient -->
                         <div class="col-md-12 col-lg-6">
@@ -168,7 +168,7 @@ $allergens_list = [
                                     <label for="phone">Ton Numéro de téléphone</label>
                                 </div>
                                 <div class="col-md-12 col-lg-6">
-                                    <input type="tel"name="phone" id="phoneNumber">
+                                    <input type="tel" placeholder="0000.00.00.00" name="phone" id="phoneNumber">
                                 </div>
                             </div>
                         </div>
