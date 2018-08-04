@@ -1,10 +1,9 @@
 <?php 
 include_once 'defines.php';
 
-include_once 'config/bdd_local.php';
 session_start();
-if(isset($_SESSION['personnal_codebar'])){
-    $personalCodebar = $_SESSION['personnal_codebar'];
+if(isset($_SESSION['personal_barcode'])){
+    $personalBarcode = $_SESSION['personal_barcode'];
 }
 $db = connectToDB('bdd_local');
 
@@ -39,110 +38,18 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
         session_destroy();
         include VIEWS.'/home.php';
     }
-    else if($pageRequired == 'encoding' && isset($personalCodebar)){
+    else if($pageRequired == 'encoding' && isset($personalBarcode)){
         include VIEWS.'/newProductForm.php';
     }
     else if($pageRequired == 'product'){
         include VIEWS.'/productSheet.php';
     }
-    else if(isset($personalCodebar)){
+    else if(isset($personalBarcode)){
         include VIEWS.'/listOfProduct.php';
     }
     else{
         include VIEWS.'/home.php';
     }
-?>
-     <!-- <div class="row"> 
-         <div class="col-md-12 col-lg-6">
-             <div class="row">
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
 
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-                
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-12 col-lg-6">
-             <div class="row">
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-
-                <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-                
-                 <div class="row">
-                     <div class="col-md-12 col-lg-9">
-                     </div>
-                     <div class="col-md-12 col-lg-3">
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div> -->
-<?php include VIEWS.'/footer.php';?>
+include VIEWS.'/footer.php'; ?>
 </html>

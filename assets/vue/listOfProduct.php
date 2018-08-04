@@ -1,9 +1,8 @@
 <?php
-var_dump($_SESSION);
-    if(!isset($_SESSION['personnal_codebar'])){
-        header('Location: '.URL);
+    if(!isset($_SESSION['personal_barcode'])){
+        // header('Location: '.URL);
     }
-    $productorId = $_SESSION['personnal_codebar'];
+    $productorId = $_SESSION['personal_barcode'];
 
     $sql = '
     SELECT * FROM products
@@ -45,7 +44,7 @@ var_dump($_SESSION);
             <?php
                 if(isset($productsRawData[$i])){
                     echo '<a href="?page=product&id='. $productsRawData[$i]['id'] .'">';
-                    echo '253'. $_SESSION['personnal_barcode'] . $productsRawData[$i]['barcode_tail'];
+                    echo '253'. $_SESSION['personal_barcode'] . $productsRawData[$i]['barcode_tail'];
                     echo '</a>';
                 } ?>
             </div>

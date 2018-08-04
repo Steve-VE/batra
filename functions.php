@@ -1,13 +1,10 @@
 <?php
 function connectToDB(string $dbConfigPath){
     require_once './config/'.$dbConfigPath.'.php';
-    global $dbHost; global $dbName;
-    global $dbUser; global $dbPassword;
 
     // Connexion à la base de données
-    try{
+    try{        
         $db = new PDO("mysql:host=$dbHost;dbname=".$dbName, $dbUser, $dbPassword);
-
         $sql = '
         SELECT * FROM producers 
         WHERE id = :id';
@@ -18,7 +15,7 @@ function connectToDB(string $dbConfigPath){
         
         $_SESSION['name'] = $userRawData['corp_name'];
         $_SESSION['id'] = $userRawData['id'];
-        $_SESSION['personnal_barcode'] = $userRawData['barcode'];
+        $_SESSION['personal_barcode'] = $userRawData['barcode'];
         $_SESSION['phone'] = $userRawData['phone'];
 
         return $db;
