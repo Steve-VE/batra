@@ -1,4 +1,11 @@
 <?php 
+    // if(isset($_SESSION['personnal_codebar']) || true){
+
+    // }
+    // else{
+    //     header('Location: '.URL);
+    // }
+    $productorId = "48612348";
     $listOfBarCodes = [];
     $listOfProducts = [
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
@@ -6,10 +13,10 @@
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga.",
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, quidem libero, aliquam expedita quos blanditiis suscipit hic similique sequi corrupti non. Dignissimos culpa illo dolore maxime recusandae, vero blanditiis fuga."
     ];
-    for($i = 0; $i < 10; $i++){
-        $barcode = "2";
+    for($i = 0; $i < 5; $i++){
+        $barcode = "254". $productorId;
 
-        for($num = 0; $num < 12; $num++){
+        for($num = 0; $num < 3; $num++){
             $barcode .= round(rand(0, 9));
         }
 

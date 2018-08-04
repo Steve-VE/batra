@@ -1,5 +1,6 @@
 <?php 
 include_once 'defines.php';
+session_start();
 $pageRequired = "home";
 $listOfPages = [
     "encoding",
@@ -22,14 +23,17 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
 </head>
 <?php
     include VIEWS.'/header.php';
-    if($pageRequired == 'encoding'){
-        include VIEWS.'/newProductForm.php';
-    }
-    else if($pageRequired == 'subscribe'){
+    if($pageRequired == 'subscribe'){
         include VIEWS.'/newUserForm.php';
     }
-    else{
+    else if($pageRequired == 'encoding' && isset($personalCodebar)){
+        include VIEWS.'/newProductForm.php';
+    }
+    else if(isset($personalCodebar)){
         include VIEWS.'/listOfProduct.php';
+    }
+    else{
+        include VIEWS.'/home.php';
     }
 ?>
      <!-- <div class="row"> 

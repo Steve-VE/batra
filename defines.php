@@ -1,4 +1,5 @@
 <?php
+define('URL', 'https://batra');
 define('ABSOLUTE_PATH', dirname('./'));
 define('IMAGES', ABSOLUTE_PATH."/assets/img");
 define('CSS', ABSOLUTE_PATH."/assets/css");
