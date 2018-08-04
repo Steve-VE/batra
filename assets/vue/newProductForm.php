@@ -4,106 +4,208 @@ $allergens_list = [
 ];
 ?>
 <form action="#" method="post" enctype="multipart/form-data">
-    <!--photo du produit-->
-    <label for="photo">Ajouter une photo du produit</label>
-    <input type="file" name="photo" id="photo">
-    <!-- dénomination -->
-        <label for="">Dénomination</label>
-        <input type="text" name="" id="">
-    <br>
-    <!-- provenance -->
-        <label for="">Provenance</label>
-        <input type="text" name="" id="">
-    <br>
-    <!-- liste ingrédient -->
-        <label for="">Liste des ingrédients</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-    <br>
-    <!-- alégéne -->
-        <b>liste des allergènes</b><br>
-            <ul>
+    <div class="row"> 
+        <div class="col-12 ">
+            <div class="row">
+                <div class="col-md-12 col-lg-6 cologneG">
+                    <div class="row">
+                        <!-- <div class="col-md-12 col-lg-6">
+                            <label for="">Dénomination</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="text" name="" id="">
+                        </div> -->
+                    </div>
+                    <div class="row"><!-- dénomination -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Dénomination</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row"><!-- liste ingrédient -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Liste des ingrédients</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <b>Déclaration nutritionnelle : </b>
+                            <ul class="row">
+                                <li class="col-12">
+                                    <div class="row">
+                                    <div class="col-4">Énergie</div>
+                                    <div class="col-6"><input type="number" name="" id=""></div>
+                                    <div class="col-2">cal</div></div>
+                                    </li>
+                                <li class="col-12"><div class="row">
+                                    <div class="col-4">Graisses totales</div>
+                                    <div class="col-6"><input type="number" name="" id=""></div>
+                                    <div class="col-2">%</div></div></li>
+                                <li class="col-12"><div class="row">
+                                    <div class="col-4">Acides gras saturés</div>
+                                    <div class="col-6"><input type="number" name="" id=""></div>
+                                    <div class="col-2">%</div></div></li>
+                                <li class="col-12"><div class="row">
+                                    <div class="col-4">Glucides</div>
+                                    <div class="col-6"><input type="number" name="carbonehydrate" id="carbonehydrate"></div>
+                                    <div class="col-2">%</div></div></li>
+                                <li class="col-12"><div class="row">
+                                        <div class="col-4">Sucres</div>
+                                        <div class="col-6"><input type="number" name="sugar" id="sugar"></div>
+                                        <div class="col-2">%</div></div></li>
+                                    <li class="col-12"><div class="row">
+                                        <div class="col-4">Protéines</div>
+                                        <div class="col-6"><input type="number" name="protein" id="protein"></div>
+                                        <div class="col-2">%</div></div></li>
+                                    <li class="col-12"><div class="row">
+                                        <div class="col-4">Sel</div>
+                                        <div class="col-6"><input type="number" name="salt" id="salt"></div>
+                                        <div class="col-2">%</div></div></li>
+                                <li class="col-12"><div class="row">
+                                        <div class="col-4">Autre</div>
+                                        <div class="col-6"><input type="number" name="otherNutrient" id="otherNutrient"></div>
+                                        <div class="col-2">%</div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row"><!-- provenance -->                      
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Provenance</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row"><!-- Conservation -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Conservation</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="date" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- pays origine --><div class="col-md-12 col-lg-6">
+                            <label for="">Pays origine</label></div><div class="col-md-12 col-lg-6">
+                            <input type="text" name="Land" id=""></div>
+                    </div>
+                    <div class="row">    
+                        <!-- Teneur en alcool --><div class="col-md-12 col-lg-4">
+                            <label for="">Teneur en alcool</label></div><div class="col-md-9 col-lg-6">
+                            <input type="number" name="alc" id="alc"></div><div class="col-md-3 col-lg-2">%</div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 cologneD">
+                    <div class="row"><!--photo du produit-->
+                        <div class="col-md-12 col-lg-4">
+                            <label for="photo">Ajouter une photo du produit</label>
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <input type="file" name="photo" id="photo">
+                        </div>
+                    </div>
+                    <div class="row"><!-- raison social -->
+                        <div class="col-md-12 col-lg-6">                            
+                            <label for="RaisonSocial">Raison Social</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">    
+                            <select name="RaisonSocial">
+                                <option value="SA">SA</option>
+                                <option value="SPRL">SPRL</option>
+                                <option value="ASBL">ASBL</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row"><!-- Nom entreprise -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Nom entreprise</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row"><!-- Adresse de l'entreprise -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Adresse de l'entreprise</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="row"><!-- contact -->
+                        <div class="col-11 offset-1" >
+                            <div class="row">
+                                <!-- Nom  -->
+                                <div class="col-md-12 col-lg-6">
+                                    <label for="nom">Ton nom</label>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <input type="text" name="nom" placeholder="Ton nom" id="name">
+                                </div>                      
+                                <!-- Prénom -->
+                                <div class="col-md-12 col-lg-6">
+                                    <label for="prenom">Ton prénom</label>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <input type="text" name="prenom" placeholder="Ton prénom" id="forname">
+                                </div>                       
+                                <!--contact mail -->
+                                <div class="col-md-12 col-lg-6">
+                                    <label for="email">Ton adresse mail</label>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <input type="email" name="email" placeholder="test@mailbox com" id="emailInput">
+                                </div>       
+                                <!-- contact phone -->
+                                <div class="col-md-12 col-lg-6">
+                                    <label for="tel">Ton Numéro de téléphone</label>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <input type="tel"name="tel" placeholder="0000.00.00.00" id="phoneNumber">
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="row"><!-- Mode d'emploie -->
+                        <div class="col-md-12 col-lg-6">
+                            <label for="">Mode d'emploie</label>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row alegene"><!-- alégéne -->
+        <div class="col-12">
+            <b>liste des allergènes</b>
+            <br>
+            <ol class="row">
                 <?php foreach($allergens_list as $allergen){?>
-                    <li>
-                        <label for="allergen_<?= $allergen;?>"><?= ucfirst($allergen);?> :</label>
-                        <select name="allergen_<?= $allergen;?>" id="">
-                            <option value="Not">N'en contient pas</option>
-                            <option value="Have">Contient</option>
-                            <option value="Mayhave">Peut contenir des traces</option>
-                            <option value="Unknow">Inconnu</option>
-                        </select>
+                    <li class="col-md-12 col-lg-6">
+                        <div class="row">
+                            <label class="col-md-12 col-lg-6" for="allergen_<?= $allergen;?>"><?= ucfirst($allergen);?> :</label>
+                            <select class="col-md-12 col-lg-5" name="allergen_<?= $allergen;?>" id="">
+                                <option value="Not">N'en contient pas</option>
+                                <option value="Have">Contient</option>
+                                <option value="Mayhave">Peut contenir des traces</option>
+                                <option value="Unknow">Inconnu</option>
+                            </select>
+                        </div>
                     </li>
                 <?php } ?>
-            </ul>
-    <br>
-    <!-- raison social -->
-        <select class="u-full-width" id="exampleRecipientInput">
-        <option value="Option 1"name="SA">SA</option>
-        <option value="Option 2"name="SPRL">SPRL</option>
-        <option value="Option 3"name="ASBL">ASBL</option>
-        <option value="Option 4"name="Autre">Autre</option>
-      </select>
-    <br>
-    <!-- nom entreprise -->
-        <label for="">Nom entreprise</label>
-        <input type="text" name="" id="">
-    <br>
-    <!-- Conservation -->
-        <label for="">Conservation</label>
-        <input type="date" name="" id="">
-    <br>
-    <!-- adresse entreprise -->
-        <label for="">Adresse entreprise</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-    <br>
-    <!-- déclaration nutritionnelle -->
-        <b>Déclaration nutritionnelle : </b>
-        <ul>
-            <li>Énergie <input type="number" name="" id="">cal</li>
-            <li>Graisses totales <input type="number" name="" id="">%</li>
-            <li>Acides gras saturés <input type="number" name="" id="">%</li>
-            <li>Glucides <input type="number" name="carbonehydrate" id="carbonehydrate">%</li>
-            <li>Sucres <input type="number" name="sugar" id="sugar">%</li>
-            <li>Protéines <input type="number" name="protein" id="protein">%</li>
-            <li>Sel <input type="number" name="salt" id="salt">%</li>
-            <li>Autre <input type="number" name="otherNutrient" id="otherNutrient">%</li>
-        </ul>
-
-        
-    <br>
-    <!-- contact -->
-        <label for="">Contact</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-<!-- Nom  -->
-    <div class="six columns">
-      <label for="exampleEmailInput">Ton nom</label>
-      <input class="u-full-width" type="text" name="nom" placeholder="Ton nom" id="name">
+            </ol>
+        </div>
     </div>
-    <!-- Prénom -->
-    <div class="six columns">
-      <label for="exampleEmailInput">Ton prénom</label>
-      <input class="u-full-width" type="text" name="prénom" placeholder="Ton prénom" id="forname">
-    </div>
-    <!--contact mail -->
-    <div class="six columns">
-      <label for="exampleEmailInput">Ton adresse mail</label>
-      <input class="u-full-width" type="email" name="email" placeholder="test@mailbox.com" id="emailInput">
-    </div>
-    <!-- contact phone -->
-    <div class="six columns">
-      <label for="exampleEmailInput">Ton Numéro de téléphone</label>
-      <input class="u-full-width" type="number"name="tel" placeholder="000.00.00.00" id="phoneNumber">
-    </div>
-    <br>
-    <!-- pays origine -->
-        <label for="">Pays origine</label>
-        <input type="text" name="Land" id="">
-    <br>
-    <!-- Teneur en alcool -->
-        <label for="">Teneur en alcool</label>
-        <input type="number" name="alc" id="alc">%
-    <br>
-    <a class="button" href="#">Bouton d'envois</a>
-<button name="envoie">Envois du formulaire</button>
-<input type="submit" value="submit input">
-<input type="button" value="button input">
+    <button name="envoie">Envois du formulaire</button>
 </form>
+

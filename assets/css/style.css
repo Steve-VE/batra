@@ -1,1 +1,29 @@
-body{ background-color: #B75DD2
+.cologneG{ background-color: #fff;
+color:#CA6EE6;}
+.cologneD{ background-color: #B75DD2;
+    color: #ffffff;}
+.alegene{ background-color: #f07;
+    color:#0ff;}
+ .row{
+    margin: 0px;
+    width: 100%;
+} 
+[class*="col-"]{
+    padding: 5px 15px;
+    
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="password"],input[type="file"],
+textarea,
+select {
+  width: 100%}
+  ol{padding: 5px 25px;}
+
+
+
