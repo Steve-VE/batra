@@ -3,12 +3,12 @@ h1 {
   font-size: 3em;
 }
 
-a {
+html a {
   text-decoration: unset;
-  color: #c882f0 !important;
+  color: #c882f0;
 }
 
-a:hover {
+html a:hover {
   text-decoration: underline;
 }
 
