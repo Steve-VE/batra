@@ -1,0 +1,9 @@
+html{
+    a{
+        text-decoration: unset;
+        color: $color-brand-purple;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
