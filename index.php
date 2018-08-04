@@ -2,14 +2,17 @@
 if(isset($_POST['envoie'])){
     // print_r($_FILES);
     include './assets/uploads/upload.php';
+}
+
+
 include_once 'defines.php';
 
-include_once 'config/bdd_local.php';
+include_once 'config/bdd.php';
 session_start();
 if(isset($_SESSION['personnal_codebar'])){
     $personalCodebar = $_SESSION['personnal_codebar'];
 }
-$db = connectToDB('bdd_local');
+$db = connectToDB('bdd');
 
 $pageRequired = "home";
 $listOfPages = [
@@ -18,7 +21,7 @@ $listOfPages = [
     "subscribe",
     "inventory"
 ];
-}
+
 if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     $pageRequired = $_GET['page'];
 }

@@ -125,10 +125,10 @@ $allergens_list = [
                     </div>
                     <div class="row"><!-- Nom entreprise -->
                         <div class="col-md-12 col-lg-6">
-                            <label for="">Nom entreprise</label>
+                            <label for="corp_name">Nom entreprise</label>
                         </div>
                         <div class="col-md-12 col-lg-6">
-                            <input type="text" name="" id="">
+                            <input type="text" name="corp_name" id="">
                         </div>
                     </div>
                     <div class="row"><!-- Adresse de l'entreprise -->
@@ -144,17 +144,17 @@ $allergens_list = [
                             <div class="row">
                                 <!-- Nom  -->
                                 <div class="col-md-12 col-lg-6">
-                                    <label for="nom">Ton nom</label>
+                                    <label for="firstname">Ton nom</label>
                                 </div>
                                 <div class="col-md-12 col-lg-6">
-                                    <input type="text" name="nom" placeholder="Ton nom" id="name">
+                                    <input type="text" name="firstname" placeholder="Ton nom" id="name">
                                 </div>                      
                                 <!-- Prénom -->
                                 <div class="col-md-12 col-lg-6">
-                                    <label for="prenom">Ton prénom</label>
+                                    <label for="lastname">Ton prénom</label>
                                 </div>
                                 <div class="col-md-12 col-lg-6">
-                                    <input type="text" name="prenom" placeholder="Ton prénom" id="forname">
+                                    <input type="text" name="lastname" placeholder="Ton prénom" id="forname">
                                 </div>                       
                                 <!--contact mail -->
                                 <div class="col-md-12 col-lg-6">
@@ -165,10 +165,10 @@ $allergens_list = [
                                 </div>       
                                 <!-- contact phone -->
                                 <div class="col-md-12 col-lg-6">
-                                    <label for="tel">Ton Numéro de téléphone</label>
+                                    <label for="phone">Ton Numéro de téléphone</label>
                                 </div>
                                 <div class="col-md-12 col-lg-6">
-                                    <input type="tel"name="tel" placeholder="0000.00.00.00" id="phoneNumber">
+                                    <input type="tel"name="phone" id="phoneNumber">
                                 </div>
                             </div>
                         </div>
