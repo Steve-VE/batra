@@ -1,0 +1,8 @@
+
+a{
+    text-decoration: unset;
+    color: $color-brand-purple!important;
+    &:hover{
+        text-decoration: underline;
+    }
+}

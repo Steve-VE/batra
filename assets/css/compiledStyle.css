@@ -1,0 +1,62 @@
+h1 {
+  text-align: right;
+  font-size: 3em;
+}
+
+a {
+  text-decoration: unset;
+  color: #c882f0 !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  background-color: #c8ffe6;
+}
+
+header img {
+  width: 100%;
+}
+
+#sign_form {
+  margin: 3vh auto;
+  border: 1px solid rgba(200, 130, 240, 0.1);
+  border-radius: 8px;
+  box-shadow: 8px 16px 16px rgba(200, 130, 240, 0.4), -12px 8px rgba(200, 255, 230, 0.2);
+}
+
+#sign_form form {
+  padding: 32px;
+}
+
+#sign_form form fieldset {
+  padding-top: 32px;
+  border-top: 1px solid rgba(200, 130, 240, 0.4);
+}
+
+#sign_form form legend {
+  padding-right: 16px;
+}
+
+#sign_form form label {
+  display: block;
+  text-align: right;
+  line-height: 2.5em;
+}
+
+#sign_form form label input {
+  margin-left: 16px;
+  float: right;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #c882f0;
+}
+/*# sourceMappingURL=compiledStyle.css.map */
