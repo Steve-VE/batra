@@ -1,9 +1,5 @@
 <?php 
 require_once 'vendor/autoload.php';
-if(isset($_POST['envoie'])){
-    // print_r($_FILES);
-    include './assets/uploads/upload.php';
-}
 include_once 'defines.php';
 
 session_start();
@@ -27,6 +23,13 @@ if(isset($_POST['signin_submit']) && isset($_POST['signin_email'])){ // Connexio
         $pageRequired = "inventory";
     }
 }
+else if(isset($_POST['product_submit'])){ // Ajout d'un nouveau produit
+    $success = saveNewProduct();
+    // print_r($_FILES);
+    if($success){
+        $pageRequired = 'inventory';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +42,7 @@ if(isset($_POST['signin_submit']) && isset($_POST['signin_email'])){ // Connexio
 </head>
 <?php
     include VIEWS.'/header.php';
+
     if($pageRequired == 'subscribe'){
         include VIEWS.'/newUserForm.php';
     }
@@ -46,7 +50,7 @@ if(isset($_POST['signin_submit']) && isset($_POST['signin_email'])){ // Connexio
         session_destroy();
         include VIEWS.'/home.php';
     }
-    else if($pageRequired == 'encoding' && isset($_SESSION['personal_barcode'])){
+    else if($pageRequired == 'encoding'){
         include VIEWS.'/newProductForm.php';
     }
     else if($pageRequired == 'product'){
@@ -59,5 +63,5 @@ if(isset($_POST['signin_submit']) && isset($_POST['signin_email'])){ // Connexio
         include VIEWS.'/home.php';
     }
 
-include VIEWS.'/footer.php'; ?>
+    include VIEWS.'/footer.php'; ?>
 </html>
