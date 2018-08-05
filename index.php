@@ -9,6 +9,7 @@ $pageRequired = "home";
 $listOfPages = [
     "encoding",
     "logout",
+    "file",
     "subscribe",
     "inventory",
     "product"
@@ -49,6 +50,9 @@ else if(isset($_POST['product_submit'])){ // Ajout d'un nouveau produit
     else if($pageRequired == 'logout'){
         session_destroy();
         include VIEWS.'/home.php';
+    }
+    else if($pageRequired == 'file'){
+        include VIEWS.'/fileProduit.php';
     }
     else if($pageRequired == 'encoding'){
         include VIEWS.'/newProductForm.php';

@@ -1,2 +1,11 @@
 @import 'modules/all';
 @import 'partials/all';
+
+.center-content{
+    max-width: 980px;
+
+    margin: 0 auto;
+    padding: $double-space;
+
+    text-align: center;
+}

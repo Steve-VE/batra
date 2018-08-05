@@ -59,4 +59,11 @@ footer {
   height: 100px;
   background-color: #c882f0;
 }
+
+.center-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px;
+  text-align: center;
+}
 /*# sourceMappingURL=compiledStyle.css.map */

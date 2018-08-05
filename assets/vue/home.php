@@ -1,4 +1,4 @@
-<form action="?page=home" method="post">
+<form class="center-content" action="?page=home" method="post">
     <fieldset>
         <legend>Se connecter</legend>
         <label>
@@ -9,6 +9,7 @@
             Mot de passe
             <input type="password" name="signin_password" id="signin_password">
         </label>
+        <br>
         <button name="signin_submit" value="signin_submit" type="submit">Valider</button>
     </fieldset>
 </form>
