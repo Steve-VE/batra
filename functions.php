@@ -1,5 +1,5 @@
 <?php
-function connectToDB(string $dbConfigPath){
+function connectToDB($dbConfigPath){
     require_once './config/'.$dbConfigPath.'.php';
 
     // Connexion à la base de données

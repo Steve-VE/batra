@@ -1,0 +1,6 @@
+{
+    "require": {
+        "verot/class.upload.php": "dev-master",
+        "zendframework/zendframework": "2.3.*"
+   }
+}

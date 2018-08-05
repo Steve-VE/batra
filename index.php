@@ -1,4 +1,9 @@
 <?php 
+
+if(isset($_POST['envoie'])){
+    // print_r($_FILES);
+    include './assets/uploads/upload.php';
+}
 include_once 'defines.php';
 
 session_start();
@@ -18,6 +23,7 @@ $listOfPages = [
 
 if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     $pageRequired = $_GET['page'];
+
 }
 ?>
 <!DOCTYPE html>
