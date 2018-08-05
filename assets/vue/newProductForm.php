@@ -40,7 +40,7 @@ $allergens_list = [
                             <textarea name="ingredients" id="ingredients" cols="30" rows="10"></textarea>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row"><!-- Déclaration nutritionnelle -->
                         <div class="col-12">
                             <b>Déclaration nutritionnelle : </b>
                             <ul class="row">

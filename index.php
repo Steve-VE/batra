@@ -16,6 +16,7 @@ $pageRequired = "home";
 $listOfPages = [
     "encoding",
     "logout",
+    "file",
     "subscribe",
     "inventory",
     "product"
@@ -43,6 +44,9 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     else if($pageRequired == 'logout'){
         session_destroy();
         include VIEWS.'/home.php';
+    }
+    else if($pageRequired == 'file'){
+        include VIEWS.'/fileProduit.php';
     }
     else if($pageRequired == 'encoding' && isset($personalBarcode)){
         include VIEWS.'/newProductForm.php';

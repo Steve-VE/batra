@@ -32,9 +32,9 @@
         <li class="row">
             <div class="product_info eight columns">
                 <p>
-                <?php if(isset($productsRawData[$i])){
-                    echo $productsRawData[$i]['name'];
-                }
+                <?php if(isset($productsRawData[$i])){?>
+                    <a href="/?page=file"><?php echo $productsRawData[$i]['name'];?></a>
+                    <?php }
                 else { ?>
                     <a href="/?page=encoding">Ajouter un nouveau produit</a>
                 <?php } ?>
