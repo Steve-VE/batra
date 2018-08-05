@@ -1,31 +1,7 @@
-// default input
-$(document).ready(function () {
-    //logo
-    const cible = document.getElementById('cible');
-    const grenouille = document.getElementById('grenouille');
-    cible.classList.add('invisible');
-    // const capture = document.getElementById('capture');
-    // capture.style.display = 'none';
-    // cible.classList.add('logo');
-});
-
-let go = document.getElementById('valider');
-let stockNum = document.getElementById('input');
-console.log(go);
-go.onclick = () => {
-    let verifPays = "254";
-    //verifCode a recupérer de la db;
-    let verifProd = "0000001";
-
-    let verifCode = verifPays + verifProd;
-    stockNum.value = verifCode +"01";
-}
-$('#generer').click(function () {
-    // //disparition logo
-    grenouille.classList.add('invisible');
-    cible.classList.remove('invisible');
+let generateBarcode = ()=>{
     //recupération valeur input
-    let input = stockNum.value;
+    let input = $('#cible').data("barcode") + "";
+    console.log(input);
     let i = 0;
     let checksum = 0;
     //attribution digit
@@ -59,7 +35,10 @@ $('#generer').click(function () {
     $('.inp12 > .digit').html(check);
     let fdin = input.charAt(0);
     getStructure(fdin);
-});
+};
+generateBarcode();
+
+
 function getStructure(fd) {
     //pattern premier chiffre
     if (fd == 0) {
@@ -188,17 +167,16 @@ function getStructure(fd) {
         $(targetl + ' > .bar .d1').css('background', '#000');
     }
 }
-$('#capturebtn').click(function () {
+$('#capturebtn').click(function () { // Conversion Canvas
     html2canvas(document.querySelector("#capture")).then(canvas => {
         document.body.appendChild(canvas);
     });
     $('.close').addClass('show');
     $('.overlay').addClass('show');
 });
-$('.close').click(function () {
+$('.close').click(function () { // Conversion PDF
     let capture = document.querySelector('canvas');
     let img = capture.toDataURL('image/jpeg, 1.0');
-    let petiteGrenouille = document.getElementById('petiteGrenouille');
     let doc = new jsPDF();
     doc.addImage(img, 'JPEG', 10, 10, 100, 50);
     doc.save('barcode.pdf');
@@ -206,6 +184,15 @@ $('.close').click(function () {
     $('canvas').remove();
     $(this).removeClass('show');
     $('.overlay').removeClass('show');
-    grenouille.classList.remove('invisible');
     cible.classList.add('invisible');
 });
+
+let captureCodebar = ()=>{
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+        let section = document.querySelector('#cible');
+        section.appendChild(canvas);
+    });
+    // $('.close').addClass('show');
+    // $('.overlay').addClass('show');
+};
+captureCodebar();
