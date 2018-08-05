@@ -4,7 +4,5 @@
 
 <link rel="stylesheet" href="./assets/css/compiledStyle.css">
 <link rel="stylesheet" href="./assets/css/barcode.css">
-<!-- <link rel="stylesheet" href="/assets/css/normalize.css">
-<link rel="stylesheet" href="/assets/css/skeleton.css"> -->
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="icon" type="image/png" href="./assets/img/Logofrog.png" />

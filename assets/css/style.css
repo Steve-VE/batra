@@ -2,9 +2,9 @@
 color:#CA6EE6;}
 .cologneD{ background-color: #B75DD2;
     color: #ffffff;}
-.alegene{ background-color: #f07;
-    color:#0ff;}
- .row{
+.alegene{ background-color: rgb(225, 255, 240);
+    color:#B75DD2;}
+.row{
     margin: 0px;
     width: 100%;
 } 
@@ -23,7 +23,4 @@ input[type="password"],input[type="file"],
 textarea,
 select {
   width: 100%}
-  ol{padding: 5px 25px;}
-
-
-
+ol{padding: 5px 25px;}

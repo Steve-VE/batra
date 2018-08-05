@@ -148,42 +148,40 @@ $allergens_list = [
                         </div>
                     </div>
                     <div class="row"><!-- contact -->
-                        <div class="col-11 offset-1" >
-                            <div class="row">
-                                <!-- Nom  -->
-                                <div class="col-md-12 col-lg-6">
-                                    <label for="firstname">Ton nom</label>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <input type="text" name="firstname" placeholder="Ton nom" id="firstname">
-                                </div>                      
-                                <!-- Prénom -->
-                                <div class="col-md-12 col-lg-6">
-                                    <label for="lastname">Ton prénom</label>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <input type="text" name="lastname" placeholder="Ton prénom" id="lastname">
-                                </div>                       
-                                <!--contact mail -->
-                                <div class="col-md-12 col-lg-6">
-                                    <label for="email">Ton adresse mail</label>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <input type="email" name="email" placeholder="test@mailbox com" id="email">
-                                </div>       
-                                <!-- contact phone -->
-                                <div class="col-md-12 col-lg-6">
-                                    <label for="phone">Ton Numéro de téléphone</label>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <input type="tel" placeholder="0000.00.00.00" name="phone" id="phone">
-                                </div>
+                        <div class="row">
+                            <!-- Nom  -->
+                            <div class="col-md-12 col-lg-6">
+                                <label for="firstname">Ton nom</label>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <input type="text" name="firstname" id="firstname">
+                            </div>                      
+                            <!-- Prénom -->
+                            <div class="col-md-12 col-lg-6">
+                                <label for="lastname">Ton prénom</label>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <input type="text" name="lastname" id="lastname">
+                            </div>                       
+                            <!--contact mail -->
+                            <div class="col-md-12 col-lg-6">
+                                <label for="email">Ton adresse mail</label>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <input type="email" name="email" id="email">
+                            </div>       
+                            <!-- contact phone -->
+                            <div class="col-md-12 col-lg-6">
+                                <label for="phone">Ton Numéro de téléphone</label>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <input type="tel" name="phone" id="phone">
                             </div>
                         </div>
                     </div>  
                     <div class="row"><!-- Mode d'emploie -->
                         <div class="col-md-12 col-lg-6">
-                            <label for="ModeEmp">Mode d'emploie</label>
+                            <label for="ModeEmp">Mode d'emploi</label>
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <textarea name="ModeEmp" id="ModeEmp" cols="30" rows="10"></textarea>

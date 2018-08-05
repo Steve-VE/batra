@@ -1,5 +1,4 @@
-
 /vendor
 /.git
 config/bdd_local.php
-
+composer.*
