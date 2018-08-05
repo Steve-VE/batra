@@ -195,8 +195,10 @@ else{
                 <div class="bar w"></div>
             </div>
         </div>
+        <div class="close" id="fill"><i class="fa fa-print fa-fw"></i></div>
     </section>
     <script src="/assets/js/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
     <script src="/assets/js/app.js"></script>
 <?php }
 ?>

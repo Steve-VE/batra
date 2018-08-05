@@ -181,10 +181,10 @@ $('.close').click(function () { // Conversion PDF
     doc.addImage(img, 'JPEG', 10, 10, 100, 50);
     doc.save('barcode.pdf');
     console.log(capture);
-    $('canvas').remove();
-    $(this).removeClass('show');
-    $('.overlay').removeClass('show');
-    cible.classList.add('invisible');
+    // $('canvas').remove();
+    // $(this).removeClass('show');
+    // $('.overlay').removeClass('show');
+    // cible.classList.add('invisible');
 });
 
 let captureCodebar = ()=>{
@@ -192,7 +192,7 @@ let captureCodebar = ()=>{
         let section = document.querySelector('#cible');
         section.appendChild(canvas);
     });
-    // $('.close').addClass('show');
+    $('.close').addClass('show');
     // $('.overlay').addClass('show');
 };
 captureCodebar();
