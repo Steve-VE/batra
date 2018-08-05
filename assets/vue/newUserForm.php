@@ -1,6 +1,6 @@
 
 <div id="sign_form" class="container">
-    <form>
+    <form action="?page=home" method="post">
         <fieldset>
             <legend>Les informations relatives à votre activité</legend>
             <div class="row">

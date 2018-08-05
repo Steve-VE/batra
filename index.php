@@ -1,5 +1,5 @@
 <?php 
-
+require_once 'vendor/autoload.php';
 if(isset($_POST['envoie'])){
     // print_r($_FILES);
     include './assets/uploads/upload.php';
@@ -7,9 +7,6 @@ if(isset($_POST['envoie'])){
 include_once 'defines.php';
 
 session_start();
-if(isset($_SESSION['personal_barcode'])){
-    $personalBarcode = $_SESSION['personal_barcode'];
-}
 $db = connectToDB('bdd_local');
 
 $pageRequired = "home";
@@ -20,10 +17,15 @@ $listOfPages = [
     "inventory",
     "product"
 ];
-
 if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
     $pageRequired = $_GET['page'];
+}
 
+if(isset($_POST['signin_submit']) && isset($_POST['signin_email'])){ // Connexion
+    $userEmail = $_POST['signin_email'];
+    if( logUser($userEmail)){
+        $pageRequired = "inventory";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -44,13 +46,13 @@ if(isset($_GET['page']) && in_array($_GET['page'], $listOfPages)){
         session_destroy();
         include VIEWS.'/home.php';
     }
-    else if($pageRequired == 'encoding' && isset($personalBarcode)){
+    else if($pageRequired == 'encoding' && isset($_SESSION['personal_barcode'])){
         include VIEWS.'/newProductForm.php';
     }
     else if($pageRequired == 'product'){
         include VIEWS.'/productSheet.php';
     }
-    else if(isset($personalBarcode)){
+    else if(isset($_SESSION['personal_barcode'])){
         include VIEWS.'/listOfProduct.php';
     }
     else{

@@ -1,10 +1,10 @@
-<?php 
+<?php
 $allergens_list = [
     "gluten", "crustacés", "oeufs", "poisson", "arachides", "soja", "lait", "fruits à coque", "céléri", "moutarde", "graines de sésame", "anhydride sulfureux et sulfites", "lupin", "mollusques"
 ];
 ?>
 <form action="#" method="post" enctype="multipart/form-data">
-    <div class="row"> 
+    <div class="row">
         <div class="col-12 ">
             <div class="row">
                 <div class="col-md-12 col-lg-6 cologneG">
@@ -151,17 +151,17 @@ $allergens_list = [
                         <div class="row">
                             <!-- Nom  -->
                             <div class="col-md-12 col-lg-6">
-                                <label for="firstname">Ton nom</label>
-                            </div>
-                            <div class="col-md-12 col-lg-6">
-                                <input type="text" name="firstname" id="firstname">
-                            </div>                      
-                            <!-- Prénom -->
-                            <div class="col-md-12 col-lg-6">
-                                <label for="lastname">Ton prénom</label>
+                                <label for="lastname">Ton nom</label>
                             </div>
                             <div class="col-md-12 col-lg-6">
                                 <input type="text" name="lastname" id="lastname">
+                            </div>                      
+                            <!-- Prénom -->
+                            <div class="col-md-12 col-lg-6">
+                                <label for="firstname">Ton prénom</label>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <input type="text" name="firstname" id="firstname">
                             </div>                       
                             <!--contact mail -->
                             <div class="col-md-12 col-lg-6">
@@ -215,6 +215,4 @@ $allergens_list = [
     <div class="row">
         <div class="col-12 text-center"><button name="envoie" class="">Envois du formulaire</button></div>
     </div>
-    
 </form>
-

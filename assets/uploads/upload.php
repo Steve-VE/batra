@@ -25,6 +25,5 @@ function uploader (){
     }
 }
 uploader();
-
 //phpinfo();
 ?>
