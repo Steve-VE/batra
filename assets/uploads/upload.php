@@ -1,5 +1,4 @@
 <?php
-
 require ('./vendor/verot/class.upload.php/src/class.upload.php');
 
 function uploader (){
@@ -22,8 +21,7 @@ function uploader (){
             echo 'type de fichier non supporté';
             file_put_contents('./assets/uploads/PhotoUploads.txt',$today.' upload de '.$handle->file_src_name.':fichier non-supporté '."\n",FILE_APPEND);
         }
+
+        return $handle->file_dst_name;
     }
 }
-uploader();
-//phpinfo();
-?>

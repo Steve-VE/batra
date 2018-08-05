@@ -1,9 +1,64 @@
 <?php
 $allergens_list = [
-    "gluten", "crustacés", "oeufs", "poisson", "arachides", "soja", "lait", "fruits à coque", "céléri", "moutarde", "graines de sésame", "anhydride sulfureux et sulfites", "lupin", "mollusques"
+    [
+        'name' => "gluten",
+        'display' => "gluten"
+    ],
+    [
+        'name' => "crustaceans",
+        'display' => "crustacés"
+    ],
+    [
+        'name' => "eggs",
+        'display' => "oeufs"
+    ],
+    [
+        'name' => "fish",
+        'display' => "poisson"
+    ],
+    [
+        'name' => "peanuts",
+        'display' => "arachides"
+    ],
+    [
+        'name' => "soybeans",
+        'display' => "soja"
+    ],
+    [
+        'name' => "milk",
+        'display' => "lait"
+    ],
+    [
+        'name' => "nuts",
+        'display' => "fruits à coque"
+    ],
+    [
+        'name' => "celery",
+        'display' => "céléri"
+    ],
+    [
+        'name' => "mustard",
+        'display' => "moutarde"
+    ],
+    [
+        'name' => "sesame_seeds",
+        'display' => "graines de sésame"
+    ],
+    [
+        'name' => "sulphur_dioxide_and_sulphites",
+        'display' => "anhydride sulfureux et sulfites"
+    ],
+    [
+        'name' => "lupin",
+        'display' => "lupin"
+    ],
+    [
+        'name' => "molluscs",
+        'display' => "mollusques"
+    ]
 ];
 ?>
-<form action="#" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-12 ">
             <div class="row">
@@ -120,7 +175,7 @@ $allergens_list = [
                     </div>
                     <div class="row"><!-- raison social -->
                         <div class="col-md-12 col-lg-6">                            
-                            <label for="RaisonSocial">Raison Social</label>
+                            <label for="RaisonSocial">Raison Sociale</label>
                         </div>
                         <div class="col-md-12 col-lg-6">    
                             <select name="RaisonSocial" id="RaisonSocial">
@@ -133,10 +188,10 @@ $allergens_list = [
                     </div>
                     <div class="row"><!-- Nom entreprise -->
                         <div class="col-md-12 col-lg-6">
-                            <label for="corp_name">Nom entreprise</label>
+                            <label for="corp_name">Nom de l'entreprise</label>
                         </div>
                         <div class="col-md-12 col-lg-6">
-                            <input type="text" name="corp_name" id="corp_name">
+                            <input type="text" name="corp_name" id="corp_name" value="<?=getUserInfo('corp_name');?>">
                         </div>
                     </div>
                     <div class="row"><!-- Adresse de l'entreprise -->
@@ -151,31 +206,31 @@ $allergens_list = [
                         <div class="row">
                             <!-- Nom  -->
                             <div class="col-md-12 col-lg-6">
-                                <label for="lastname">Ton nom</label>
+                                <label for="lastname">Nom</label>
                             </div>
                             <div class="col-md-12 col-lg-6">
-                                <input type="text" name="lastname" id="lastname">
+                                <input type="text" name="lastname" id="lastname" value="<?=getUserInfo('lastname');?>">
                             </div>                      
                             <!-- Prénom -->
                             <div class="col-md-12 col-lg-6">
-                                <label for="firstname">Ton prénom</label>
+                                <label for="firstname">Prénom</label>
                             </div>
                             <div class="col-md-12 col-lg-6">
-                                <input type="text" name="firstname" id="firstname">
+                                <input type="text" name="firstname" id="firstname" value="<?=getUserInfo('firstname');?>">
                             </div>                       
                             <!--contact mail -->
                             <div class="col-md-12 col-lg-6">
-                                <label for="email">Ton adresse mail</label>
+                                <label for="email">Adresse mail</label>
                             </div>
                             <div class="col-md-12 col-lg-6">
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" value="<?=getUserInfo('email');?>">
                             </div>       
                             <!-- contact phone -->
                             <div class="col-md-12 col-lg-6">
-                                <label for="phone">Ton Numéro de téléphone</label>
+                                <label for="phone">Numéro de téléphone</label>
                             </div>
                             <div class="col-md-12 col-lg-6">
-                                <input type="tel" name="phone" id="phone">
+                                <input type="tel" name="phone" id="phone" value="<?=getUserInfo('phone');?>">
                             </div>
                         </div>
                     </div>  
@@ -199,12 +254,12 @@ $allergens_list = [
                 <?php foreach($allergens_list as $allergen){?>
                     <li class="col-md-12 col-lg-6">
                         <div class="row">
-                            <label class="col-md-12 col-lg-6" for="allergen_<?= $allergen;?>"><?= ucfirst($allergen);?> :</label>
-                            <select class="col-md-12 col-lg-5" name="allergen_<?= $allergen;?>" id="allergen_<?= $allergen;?>">
-                                <option value="Not">N'en contient pas</option>
-                                <option value="Have">Contient</option>
-                                <option value="Mayhave">Peut contenir des traces</option>
-                                <option value="Unknow">Inconnu</option>
+                            <label class="col-md-12 col-lg-6" for="allergen_<?= $allergen['name'];?>"><?= ucfirst($allergen['display']);?> :</label>
+                            <select class="col-md-12 col-lg-5" name="allergen_<?= $allergen['name'];?>" id="allergen_<?= $allergen['name'];?>">
+                                <option value="nothing" selected>N'en contient pas</option>
+                                <option value="contain">Contient</option>
+                                <option value="may_contain">Peut contenir des traces</option>
+                                <option value="unknown">Inconnu</option>
                             </select>
                         </div>
                     </li>
@@ -213,6 +268,8 @@ $allergens_list = [
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center"><button name="envoie" class="">Envois du formulaire</button></div>
+        <div class="col-12 text-center">
+        <button name="product_submit" value="product_submit" type="submit">Confirmer</button>
+        </div>
     </div>
 </form>
