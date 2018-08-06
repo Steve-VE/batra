@@ -1,6 +1,7 @@
 #cible{
     position: relative;
     // display: none;
+    width: 100%;
 }
 
 .box {
@@ -42,22 +43,21 @@ canvas {
 .close {
     position: absolute;
     right: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-    background: dodgerblue;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(22, 184, 78, 0.6);
     color: #fff;
     line-height: 48px;
     text-align: center;
-    font-size: 30px;
+    font-size: 80px;
     cursor: pointer;
-    display: none;
     z-index: 10;
     &.show {
         display: block;
     }
     &:hover {
-        background: darken(dodgerblue, 10);
+        background: darken(rgba(22, 184, 78, 0.6), 10);
     }
 }
 

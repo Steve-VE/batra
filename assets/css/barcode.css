@@ -1,5 +1,6 @@
 #cible {
   position: relative;
+  width: 100%;
 }
 
 .box {
@@ -41,16 +42,15 @@ canvas {
 .close {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 48px;
-  height: 48px;
-  background: dodgerblue;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(22, 184, 78, 0.6);
   color: #fff;
   line-height: 48px;
   text-align: center;
-  font-size: 30px;
+  font-size: 80px;
   cursor: pointer;
-  display: none;
   z-index: 10;
 }
 
@@ -59,7 +59,7 @@ canvas {
 }
 
 .close:hover {
-  background: #0077ea;
+  background: rgba(17, 138, 59, 0.6);
 }
 
 .overlay {
